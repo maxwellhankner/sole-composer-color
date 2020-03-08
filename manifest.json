@@ -1,0 +1,11 @@
+{
+    "short_name": "Sole Composer",
+    "name": "Sole Composer",
+    "start_url": ".",
+    "description": "TESTING",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#000000",
+    "background_color": "#000000"
+}

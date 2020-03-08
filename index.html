@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/supreme-brown-supreme-ny.jpg">
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/88/88746.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Sole Composer Viewport</title>
+</head>
+<body>
+    <div class="interface">
+        <div class="upper-interface">
+            <div class="canvas">
+                <canvas id="threeview"></canvas>
+            </div>
+            <div class="selection-banner">
+                <button>&#x003C;</button>
+                <div class="selection-label"><p>SELECTION</p></div>
+                <button>&#x3e;</button>
+            </div>
+        </div>
+        <div class="lower-interface">
+            <div class="texture"></div>
+            <div id="texture-container">
+                <canvas id="texture" width="4096" height="4096"></canvas>
+            </div>
+            <div class="buttons">
+                <button onclick="reset();">RESET</button>
+            <button onclick="mover(10, 0);">UP</button>
+            <button onclick="mover(-10, 0);">DOWN</button>
+            <button onclick="mover(0, 10);">LEFT</button>
+            <button onclick="mover(0, -10);">RIGHT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/scripts/viewport.js"></script>
+
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/drawscript.js"></script>
+</body>
+</html>

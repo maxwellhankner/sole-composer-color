@@ -1,1 +1,1 @@
-# sole-composer-color
+# sole-composer
