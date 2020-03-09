@@ -7,17 +7,17 @@
     <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/88/88746.png" type="image/x-icon">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Sole Composer Viewport</title>
+    <title>Sole Composer Color</title>
 </head>
 <body>
     <div class="interface">
         <div class="upper-interface">
-            <div class="canvas">
+            <div class="canvas-container">
                 <canvas id="threeview"></canvas>
             </div>
             <div class="selection-banner">
                 <button>&#x003C;</button>
-                <div class="selection-label"><p>SELECTION</p></div>
+                <div class="selection-label"><p>SWOOSH</p></div>
                 <button>&#x3e;</button>
             </div>
         </div>
@@ -26,12 +26,23 @@
             <div id="texture-container">
                 <canvas id="texture" width="4096" height="4096"></canvas>
             </div>
-            <div class="buttons">
+            <div class="color-type-buttons">
+                <button onclick="buildColorTexture();" id="color-button">COLOR</button>
+                <button onclick="buildGraphicTexture();" id="graphic-button">GRAPHIC</button>
+            </div>
+            <div class="buttons" id="graphic-buttons">
                 <button onclick="reset();">RESET</button>
-            <button onclick="mover(10, 0);">UP</button>
-            <button onclick="mover(-10, 0);">DOWN</button>
-            <button onclick="mover(0, 10);">LEFT</button>
-            <button onclick="mover(0, -10);">RIGHT</button>
+                <button onclick="mover(10, 0);">UP</button>
+                <button onclick="mover(-10, 0);">DOWN</button>
+                <button onclick="mover(0, 10);">LEFT</button>
+                <button onclick="mover(0, -10);">RIGHT</button>
+            </div>
+            <div class="buttons" id="color-buttons">
+                <button onclick="changeColorTexture('fff');">WHITE</button>
+                <button onclick="changeColorTexture('999');">GREY</button>
+                <button onclick="changeColorTexture('e66');">RED</button>
+                <button onclick="changeColorTexture('9c9');">GREEN</button>
+                <button onclick="changeColorTexture('99e');">BLUE</button>
             </div>
         </div>
     </div>
@@ -42,6 +53,6 @@
     <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
     <script src="assets/scripts/script.js"></script>
-    <script src="assets/scripts/drawscript.js"></script>
+    <script src="assets/scripts/build-texture.js"></script>
 </body>
 </html>
