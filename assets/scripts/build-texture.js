@@ -71,6 +71,7 @@ function drawSwooshColor(hex) {
 // Change swoosh color
 function changeColorTexture(newHex) {
     swooshColor = newHex;
+    
     buildColorTexture();
 }
 
@@ -97,4 +98,10 @@ function mover(xChange, yChange) {
     swooshX = swooshX + xChange;
     swooshY = swooshY + yChange;
     buildGraphicTexture();
+}
+
+// Color picker
+function pickedColorTexture() {
+    swooshColor = document.getElementById('color-picker').value;
+    changeColorTexture(swooshColor);
 }

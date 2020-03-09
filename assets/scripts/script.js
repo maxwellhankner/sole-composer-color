@@ -24,7 +24,7 @@ scene.add(light);
 //===================================================== orbit controls
 controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.maxDistance = 9;
-controls.minDistance = 4;
+controls.minDistance = 3;
 controls.minPolarAngle = 1;
 controls.maxPolarAngle = Math.PI/1.2;
 controls.enablePan = false;

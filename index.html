@@ -38,8 +38,8 @@
                 <button onclick="mover(0, -10);">RIGHT</button>
             </div>
             <div class="buttons" id="color-buttons">
+                <input type="color" id="color-picker" value="#777777" onchange="changeColorTexture(document.getElementById('color-picker').value.substring(1));">
                 <button onclick="changeColorTexture('fff');">WHITE</button>
-                <button onclick="changeColorTexture('999');">GREY</button>
                 <button onclick="changeColorTexture('e66');">RED</button>
                 <button onclick="changeColorTexture('9c9');">GREEN</button>
                 <button onclick="changeColorTexture('99e');">BLUE</button>
