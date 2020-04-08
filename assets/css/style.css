@@ -1,51 +1,65 @@
 html, body {
-    position: fixed;
-    top: 0;
-    bottom: 0;
+    margin: 0px;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Three View -------------------------------------------------------------------- */
+
+.threeview-container{
     width: 100%;
     height: 100%;
-    margin: 0;
-    touch-action: manipulation;
-    /* Disables mobile scroll on Mozilla and Edge */
-    overflow: hidden;
-    overscroll-behavior: none;
-    background-color: black;
 }
-.interface {
-    background-color: #111;
-    width: 100%;
-    height: 100%;
-}
-.upper-interface {
-    position: relative;
-    height: 50%;
-}
-.canvas-container {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-}
+
 #threeview {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-#texture-container {
-    position: absolute;
+#texture{
+    display: none;
     width: 100%;
-    height: 100%;
-    margin: auto;
-}
-#texture {
-    display: block;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
 }
 
+/* Upper Interface -------------------------------------------------------------------- */
+.upper-interface {
+    position: fixed;
+    width: 100%;
+    height: 50%;
+}
+
+/* Image asset container */
+.images-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    display: none;
+}
+.preload-images {
+    width: 100%;
+}
+
+.final-texture-container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Final Texture */
+.canvas-style {
+    width: 100%;
+}
+
+/* Selection Banner */
 .selection-banner {
     position: absolute;
     width: 100%;
@@ -65,74 +79,36 @@ html, body {
 .selection-label p {
     margin: 0;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
 }
+
+/* Lower Interface -------------------------------------------------------------------- */
 .lower-interface {
-    background-color: #000;
-    height: 50%;
-    position: relative;
-}
-.buttons {
-    position: absolute;
-    width: 100%;
-    height: 15%;
+    position: fixed;
     bottom: 0;
-    background-color: #000;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-.buttons button {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-}
-.color-type-buttons {
-    position: absolute;
     width: 100%;
-    height: 15%;
-    top: 0;
-    background-color: #000;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 50%;
+    background-color: #ddd;
 }
-.color-type-buttons button {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    color: #fff;
-    font-size: 1rem;
+
+/* Color or Graphic */
+.selection-option p {
+    text-align: center;
 }
-#graphic-buttons {
+
+.color-selection {
     display: none;
 }
 
-.active {
-    text-decoration: underline;
-    background-color: aqua;
+.graphic-selection {
+    display: none;
 }
 
-#color-picker {
+/* Selection Texture */
+.selection-texture {
     width: 100%;
-    height: 100%;
-    border: none;
-    background-color: black;
-    border-image-width: 0;
-    padding: 0;
+    height: 100px;
 }
 
-
-@media only screen and (orientation: landscape) {
-    .interface {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .upper-interface, .lower-interface {
-        height: 100%;
-    }
-    .canvas-container {
-        width: 50%;
-        height: 100%;
-    }
+#tempcanvas {
+    width: 100%;
 }
