@@ -35,8 +35,7 @@ var ctx = document.getElementById('texture').getContext('2d');
 ctx.fillStyle = "#fff";
 ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 var shadowimg = new Image();
-shadowimg.src = 'assets/images/blackout.png';
-// shoe_Diffuse
+shadowimg.src = 'assets/images/shoe_Diffuse.png';
 shadowimg.onload = function () {
   ctx.drawImage(shadowimg, 0, 0, ctx.canvas.width, ctx.canvas.height);
 }
